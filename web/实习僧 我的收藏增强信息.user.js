@@ -11,18 +11,20 @@ console.info("shixiseng");
 jQuery("body").bind("DOMNodeInserted.hujimiya",function onInserted(event) {
 
    if(event.target.classList[0]==="fun_model"){
-       debugger;
+       // debugger;
        var interns = jQuery(".fun_model>div[data-stype=intern]");
        // console.info(interns);
        var hrefs = [];
        interns.each(function (index, element) {
            hrefs[index] = element.querySelector("a").getAttribute("href");
        });
-       hrefs.forEach(function (ele, index, arr) {
-           var ajax = jQuery.ajax(ele);
-           const PRICE_SELECTOR = "span.daymoney";//待遇
-           const COMPANYNAME_SELECTOR = ".jb_det_right_top>p:first-of-type>a";//公司名
-           const PLACE_SELECTOR = "span.city";//城市名 取title即可
+       var index = 0;
+       var length = hrefs.length;
+       const PRICE_SELECTOR = "span.daymoney";//待遇
+       const COMPANYNAME_SELECTOR = ".jb_det_right_top>p:first-of-type>a";//公司名
+       const PLACE_SELECTOR = "span.city";//城市名 取title即可
+       var loadXhr = function (index) {
+           var ajax = jQuery.ajax(hrefs[index]);
            ajax.success(function (responseText,textStatus,jqXHR) {
                var jhtml = jQuery(responseText);
                interns.eq(index)
@@ -31,9 +33,21 @@ jQuery("body").bind("DOMNodeInserted.hujimiya",function onInserted(event) {
                    .append(jhtml.find(COMPANYNAME_SELECTOR))
                    .css("height","auto")
            }).error(function (jqXHR,textStatus,errorString) {
-               console.info("[Hujimiya Error]",index,ele,errorString);
+               console.info("[Hujimiya Error]",index,hrefs[index],errorString);
+           }).then(function () {
+              console.info(index++);
+              // debugger;
+              if(index<length){
+                  loadXhr(index);
+              }
            });
-       });
+
+       };
+       loadXhr(0);
+
+
+
+
        jQuery(event.currentTarget).unbind("DOMNodeInserted.hujimiya");
    }
 
