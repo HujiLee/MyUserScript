@@ -39,6 +39,8 @@ jQuery("body").bind("DOMNodeInserted.hujimiya",function onInserted(event) {
               // debugger;
               if(index<length){
                   loadXhr(index);
+              }else{
+                  console.info("[Hujimiya Info]Complete")
               }
            });
 
@@ -46,8 +48,7 @@ jQuery("body").bind("DOMNodeInserted.hujimiya",function onInserted(event) {
        loadXhr(0);
 
 
-
-
+       jQuery(".back_nav li:nth-of-type(2)").click();//点击"职位"使得默认就在职位tab上
        jQuery(event.currentTarget).unbind("DOMNodeInserted.hujimiya");
    }
 
