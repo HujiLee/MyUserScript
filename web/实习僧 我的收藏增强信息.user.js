@@ -9,7 +9,7 @@
 console.info("[Hujimiya Info]", "实习僧go");
 // console.info(jQuery("body"));
 jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
-    console.info(event.target)
+    // console.info(event.target);
     if (event.target.classList[0] === "fun_model") {
         // debugger;
         jQuery(event.target).bind("DOMNodeInserted.hujimiya", function modelOnInserted(event) {
@@ -17,28 +17,26 @@ jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
             if (event.target.tagName == "SCRIPT") {
                 // debugger;
                 (function main() {
-                    var interns = jQuery(".fun_model>div[data-stype=intern]");
+                    const interns = jQuery(".fun_model>div[data-stype=intern]");
                     // console.info(interns);
-                    var hrefs = [];
+                    const hrefs = [];
                     interns.each(function pushToHrefs(index, element) {
                         hrefs[index] = element.querySelector("a").getAttribute("href");
                     });
-                    var index = 0;
-                    var hrefsLength = hrefs.length;
+                    const hrefsLength = hrefs.length;
                     const PRICE_SELECTOR = "span.daymoney";//待遇
                     const COMPANYNAME_SELECTOR = ".jb_det_right_top>p:first-of-type>a";//公司名
                     const PLACE_SELECTOR = "span.city";//城市名 取title即可
-                    const X_ON_TIME = 5;//同一时刻最多可以同时进行的AJAX数目
-                    var loadXhr = function loadXhr(index) {
-                        var endIndex = Math.round(Math.min(hrefsLength - 1, index + X_ON_TIME - 1));
-                        var subLength = endIndex - index + 1;
+                    const X_ON_TIME_STEP = 25;//同一时刻最多可以同时进行的AJAX数目
+                    const loadXhr = function loadXhr(startIndex) {
+                        const endIndex = Math.round(Math.min(hrefsLength - 1, startIndex + X_ON_TIME_STEP - 1));
+                        const subLength = endIndex - startIndex + 1;
                         var countAjaxFinished = 0;
-                        for (var i = index; i <= endIndex; i++) {
+                        for (var i = startIndex; i <= endIndex; i++) {
                             (function (i) {
-                                var ajax = jQuery.ajax(hrefs[i]);
-
+                                const ajax = jQuery.ajax(hrefs[i]);
                                 ajax.success(function ajaxSuc(responseText, textStatus, jqXHR) {
-                                    var jhtml = jQuery(responseText);
+                                    const jhtml = jQuery(responseText);
                                     interns.eq(i)
                                         .append(jhtml.find(PLACE_SELECTOR))
                                         .append(jhtml.find(PRICE_SELECTOR))
@@ -50,27 +48,21 @@ jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
                                     // console.info(index++);
                                     // debugger;
                                     countAjaxFinished++;
-                                    console.count("[Hujimiya Count] Ajax获取职位信息<<"+index);
+                                    console.count("[Hujimiya Count] Ajax获取职位信息<<" + startIndex);
                                     if (countAjaxFinished === subLength) {
-                                        var nextIndex = index + X_ON_TIME;
+                                        const nextIndex = startIndex + X_ON_TIME_STEP;
                                         if (nextIndex < hrefsLength) {
                                             loadXhr(nextIndex);
                                         } else {
                                             console.info("[Hujimiya Info]", "Complete")
                                         }
                                     }
-
                                 });
-
                             })(i);
                         }
-
-
                     };
                     loadXhr(0);
                 })();
-
-
                 setTimeout(function clicTab() {
                     jQuery(".back_nav li:nth-of-type(2)").click();//点击"职位"使得默认就在职位tab上
                 }, 1000);
