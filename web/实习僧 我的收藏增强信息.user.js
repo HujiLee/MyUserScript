@@ -31,7 +31,7 @@ jQuery("body").bind("DOMNodeInserted.hujimiya",function onInserted(event) {
                    .append(jhtml.find(COMPANYNAME_SELECTOR))
                    .css("height","auto")
            }).error(function (jqXHR,textStatus,errorString) {
-               console.info("[Hujimiya]",index,ele,errorString);
+               console.info("[Hujimiya Error]",index,ele,errorString);
            });
        });
        jQuery(event.currentTarget).unbind("DOMNodeInserted.hujimiya");
