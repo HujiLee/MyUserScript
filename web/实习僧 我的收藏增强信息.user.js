@@ -25,9 +25,11 @@ jQuery("body").bind("DOMNodeInserted.hujimiya",function onInserted(event) {
            const PLACE_SELECTOR = "span.city";//城市名 取title即可
            ajax.success(function (responseText,textStatus,jqXHR) {
                var jhtml = jQuery(responseText);
-               interns.eq(index).append(jhtml.find(PRICE_SELECTOR))
+               interns.eq(index)
+                   .append(jhtml.find(PLACE_SELECTOR))
+                   .append(jhtml.find(PRICE_SELECTOR))
                    .append(jhtml.find(COMPANYNAME_SELECTOR))
-                   .append(jhtml.find(PLACE_SELECTOR)).css("height","auto")
+                   .css("height","auto")
            }).error(function (jqXHR,textStatus,errorString) {
                console.info("[Hujimiya]",index,ele,errorString);
            });
