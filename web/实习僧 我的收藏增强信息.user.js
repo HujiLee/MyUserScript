@@ -10,24 +10,26 @@ console.info("[Hujimiya Info]", "实习僧go");
 // console.info(jQuery("body"));
 const timer_date = [];
 var timer_flag   = false;
-
-jQuery(window).bind("timer.go",function (event) {
+var jWin = jQuery(window);
+jWin.bind("timer.go",function (event) {
     if(!timer_flag){
         timer_flag=!timer_flag;
         timer_date[0] = new Date();
     }
 });
-jQuery(window).bind("timer.end",function (event) {
+jWin.bind("timer.end",function (event) {
     timer_date[1] = new Date();
     console.info("[Hujimiya Timer]",timer_date[0],"to",timer_date[1]);
-
+    timer_date.pop();
+    timer_date.pop();
+    debugger;
+    jQuery(event.currentTarget).unbind("timer.go").unbind("timer.end");
 });
 jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
     // console.info(event.target);
     if (event.target.classList[0] === "fun_model") {
         // debugger;
         jQuery(event.target).bind("DOMNodeInserted.hujimiya", function modelOnInserted(event) {
-
             if (event.target.tagName == "SCRIPT") {
                 // debugger;
                 (function main() {
@@ -41,7 +43,7 @@ jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
                     const PRICE_SELECTOR = "span.daymoney";//待遇
                     const COMPANYNAME_SELECTOR = ".jb_det_right_top>p:first-of-type>a";//公司名
                     const PLACE_SELECTOR = "span.city";//城市名 取title即可
-                    const X_ON_TIME_STEP = 25;//同一时刻最多可以同时进行的AJAX数目
+                    const X_ON_TIME_STEP = 95;//同一时刻最多可以同时进行的AJAX数目
                     const loadXhr = function loadXhr(startIndex) {
                         const endIndex = Math.round(Math.min(hrefsLength - 1, startIndex + X_ON_TIME_STEP - 1));
                         const subLength = endIndex - startIndex + 1;
