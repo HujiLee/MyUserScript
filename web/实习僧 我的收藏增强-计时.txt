@@ -1,8 +1,16 @@
+#2017-4-11 1:16:11
+#测试数据量:截至此时刻,"我的收藏"内334条职位
+#对应脚本:2017年4月11日这一天写的实习僧 我的收藏增强信息.user.js
+#变量:X_ON_TIME_STEP
+#函数值:跑完所有AJAX所需要的时间
+
+
 1=>[Hujimiya Timer] Tue Apr 11 2017 01:04:17 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:06:01 GMT+0800 (中国标准时间)//104s
-2=>
+2=>[Hujimiya Timer] Tue Apr 11 2017 01:11:45 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:12:45 GMT+0800 (中国标准时间)//60s
 3=>[Hujimiya Timer] Tue Apr 11 2017 01:08:11 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:08:53 GMT+0800 (中国标准时间)//42s
-4=>
+4=>[Hujimiya Timer] Tue Apr 11 2017 01:13:26 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:14:00 GMT+0800 (中国标准时间)//34s
 5=>[Hujimiya Timer] Tue Apr 11 2017 01:03:16 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:03:43 GMT+0800 (中国标准时间)//27s
+10=>[Hujimiya Timer] Tue Apr 11 2017 01:14:39 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:15:05 GMT+0800 (中国标准时间)//26s
 15=>[Hujimiya Timer] Tue Apr 11 2017 01:00:43 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:01:05 GMT+0800 (中国标准时间)//22s
 25=>[Hujimiya Timer] Tue Apr 11 2017 00:53:38 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:53:57 GMT+0800 (中国标准时间)//19s
 35=>[Hujimiya Timer] Tue Apr 11 2017 00:59:23 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:59:42 GMT+0800 (中国标准时间)//19s
