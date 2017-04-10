@@ -6,7 +6,7 @@
 // @run-at      document-end
 // ==/UserScript==
 
-console.info("[Hujimiya Info]","实习僧go");
+console.info("[Hujimiya Info]", "实习僧go");
 // console.info(jQuery("body"));
 jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
     console.info(event.target)
@@ -16,7 +16,7 @@ jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
 
             if (event.target.tagName == "SCRIPT") {
                 // debugger;
-                {
+                (function main() {
                     var interns = jQuery(".fun_model>div[data-stype=intern]");
                     // console.info(interns);
                     var hrefs = [];
@@ -47,13 +47,15 @@ jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
                             if (index < length) {
                                 loadXhr(index);
                             } else {
-                                console.info("[Hujimiya Info]","Complete")
+                                console.info("[Hujimiya Info]", "Complete")
                             }
                         });
 
                     };
                     loadXhr(0);
-                }
+                })();
+
+
                 setTimeout(function clicTab() {
                     jQuery(".back_nav li:nth-of-type(2)").click();//点击"职位"使得默认就在职位tab上
                 }, 1000);
