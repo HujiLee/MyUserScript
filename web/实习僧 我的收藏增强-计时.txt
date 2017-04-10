@@ -1,0 +1,12 @@
+1=>[Hujimiya Timer] Tue Apr 11 2017 01:04:17 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:06:01 GMT+0800 (中国标准时间)//104s
+2=>
+3=>[Hujimiya Timer] Tue Apr 11 2017 01:08:11 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:08:53 GMT+0800 (中国标准时间)//42s
+4=>
+5=>[Hujimiya Timer] Tue Apr 11 2017 01:03:16 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:03:43 GMT+0800 (中国标准时间)//27s
+15=>[Hujimiya Timer] Tue Apr 11 2017 01:00:43 GMT+0800 (中国标准时间) to Tue Apr 11 2017 01:01:05 GMT+0800 (中国标准时间)//22s
+25=>[Hujimiya Timer] Tue Apr 11 2017 00:53:38 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:53:57 GMT+0800 (中国标准时间)//19s
+35=>[Hujimiya Timer] Tue Apr 11 2017 00:59:23 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:59:42 GMT+0800 (中国标准时间)//19s
+45=>[Hujimiya Timer] Tue Apr 11 2017 00:49:59 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:50:18 GMT+0800 (中国标准时间)//19s
+65=>[Hujimiya Timer] Tue Apr 11 2017 00:56:43 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:57:02 GMT+0800 (中国标准时间)//19s
+100=>[Hujimiya Timer] Tue Apr 11 2017 00:55:00 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:55:18 GMT+0800 (中国标准时间)//18s
+300=>[Hujimiya Timer] Tue Apr 11 2017 00:58:09 GMT+0800 (中国标准时间) to Tue Apr 11 2017 00:58:25 GMT+0800 (中国标准时间)//16s

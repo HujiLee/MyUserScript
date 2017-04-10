@@ -41,7 +41,7 @@ jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
                     const PRICE_SELECTOR = "span.daymoney";//待遇
                     const COMPANYNAME_SELECTOR = ".jb_det_right_top>p:first-of-type>a";//公司名
                     const PLACE_SELECTOR = "span.city";//城市名 取title即可
-                    const X_ON_TIME_STEP = 45;//同一时刻最多可以同时进行的AJAX数目
+                    const X_ON_TIME_STEP = 25;//同一时刻最多可以同时进行的AJAX数目
                     const loadXhr = function loadXhr(startIndex) {
                         const endIndex = Math.round(Math.min(hrefsLength - 1, startIndex + X_ON_TIME_STEP - 1));
                         const subLength = endIndex - startIndex + 1;
