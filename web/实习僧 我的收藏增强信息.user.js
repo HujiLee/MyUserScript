@@ -22,7 +22,7 @@ jWin.bind("timer.end",function (event) {
     console.info("[Hujimiya Timer]",timer_date[0],"to",timer_date[1]);
     timer_date.pop();
     timer_date.pop();
-    debugger;
+    // debugger;
     jQuery(event.currentTarget).unbind("timer.go").unbind("timer.end");
 });
 jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
