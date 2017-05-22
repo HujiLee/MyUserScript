@@ -5,11 +5,26 @@
 // @match     http://www.tsdm.me/forum.php?*
 // @run-at      document-end
 // ==/UserScript==
-
 var HUJIMIYA_MEMES = [
     ["党的恩情说不完", "http://comment.bjcnc.img.sohucs.com/pM2avET_jpg"],
     ["哦是吗", "http://0d077ef9e74d8.cdn.sohucs.com/pPpBYWv_jpg"],
-    ["目瞪藏呆", "http://0d077ef9e74d8.cdn.sohucs.com/pTo1crn_png"]
+    ["目瞪藏呆", "http://0d077ef9e74d8.cdn.sohucs.com/pTo1crn_png"],
+    ["洋洋得藏","http://sfeomoe.com/images/2017/01/18/d0d99779cdedcee0.png"],
+    ["搞着妹子头像","http://sfeomoe.com/images/2017/01/18/25ac821f9649655e.jpg"],
+    ["呸","http://sfeomoe.com/images/2017/01/18/9a8784ddd626f0af.jpg"],
+    ["一时语塞","http://sfeomoe.com/images/2017/01/18/68063438606cc12e.jpg"],
+    ["三条狗","http://sfeomoe.com/images/2017/01/18/14963bd7ccae7d02.gif"],
+    ["鸡听了只想赶快离开","http://sfeomoe.com/images/2017/01/18/98e0f74bdd7b4472.jpg"],
+    ["届かない恋","http://sfeomoe.com/images/2017/01/18/43b3717d1fa1e41f.gif"],
+    ["婚博会","http://sfeomoe.com/images/2017/01/18/QQ20161113210633.png"],
+    ["改需求","http://sfeomoe.com/images/2017/01/18/d962dde644512eb6.gif"],
+    ["我在隔壁都能听见你们说我帅","http://sfeomoe.com/images/2017/01/18/044fd78110fc5948.jpg"],
+    ["操心","http://sfeomoe.com/images/2017/01/18/fb3aeed5da2018fc.gif"],
+    ["给大佬递帽","http://sfeomoe.com/images/2017/01/18/8ad77b0c8aa1451d.jpg"],
+    ["我不仅嗨到最晚","http://sfeomoe.com/images/2017/01/18/f2690498765ff602.jpg"],
+    ["放你娘的狗屁","http://sfeomoe.com/images/2017/01/18/697f4795e4f929b3.jpg"],
+    ["好奇心害死猫","http://sfeomoe.com/images/2017/01/18/0faea7fa53eb18fe.gif"],
+    ["善哉","http://sfeomoe.com/images/2017/01/18/dc69a02df7ccddd9.jpg"]
 ];
 
 

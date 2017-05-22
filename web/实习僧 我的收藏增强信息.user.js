@@ -27,6 +27,7 @@ jWin.bind("timer.end",function (event) {
 });
 jQuery("body").bind("DOMNodeInserted.hujimiya", function bodyOnInserted(event) {
     // console.info(event.target);
+    debugger;
     if (event.target.classList[0] === "fun_model") {
         // debugger;
         jQuery(event.target).bind("DOMNodeInserted.hujimiya", function modelOnInserted(event) {
