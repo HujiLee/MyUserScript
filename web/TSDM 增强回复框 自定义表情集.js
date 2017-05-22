@@ -24,7 +24,8 @@ var HUJIMIYA_MEMES = [
     ["我不仅嗨到最晚","http://sfeomoe.com/images/2017/01/18/f2690498765ff602.jpg"],
     ["放你娘的狗屁","http://sfeomoe.com/images/2017/01/18/697f4795e4f929b3.jpg"],
     ["好奇心害死猫","http://sfeomoe.com/images/2017/01/18/0faea7fa53eb18fe.gif"],
-    ["善哉","http://sfeomoe.com/images/2017/01/18/dc69a02df7ccddd9.jpg"]
+    ["善哉","http://sfeomoe.com/images/2017/01/18/dc69a02df7ccddd9.jpg"],
+    ["不存在的","http://0d077ef9e74d8.cdn.sohucs.com/qkjwO3D_jpg"]
 ];
 
 
