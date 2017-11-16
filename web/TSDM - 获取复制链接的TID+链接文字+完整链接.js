@@ -46,6 +46,8 @@ const Namspace = (function () {
                     '}' +
                     'i#del-popover{' +
                     '    position: absolute;' +
+                    '    right: -10px;\
+                top: -10px;' +
                     'background-color: red;\
                 width: 20px;\
                 border-radius: 100%;\
