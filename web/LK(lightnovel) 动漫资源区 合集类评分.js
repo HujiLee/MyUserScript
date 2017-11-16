@@ -56,10 +56,6 @@
     // var h3 = $1L.find("h3.psth.xs1");
     // var dl = $1L.find("dl.rate");
     var css = "<style>" +
-        "#postlist>div[id^=post]:first-of-type h3.psth.xs1{" +
-        "    position: fixed;\
-    bottom: 0;" +
-        "}" +
         "#postlist>div[id^=post]:first-of-type dl.rate{" +
         "position: fixed;\
     bottom: 0;\
