@@ -52,7 +52,7 @@
     })();
 }();
 +function rateLogCss() {
-    var $1L = jQuery("#postlist").find(">div[id^=post]:first-of-type");
+    // var $1L = jQuery("#postlist").find(">div[id^=post]:first-of-type");
     // var h3 = $1L.find("h3.psth.xs1");
     // var dl = $1L.find("dl.rate");
     var css = "<style>" +
@@ -68,5 +68,5 @@
     border: 2px solid #FF0080;" +
         "}" +
         "</style>";
-    jQuery(css).appendTo($1L);
+    jQuery(css).appendTo(document.body);
 }();
