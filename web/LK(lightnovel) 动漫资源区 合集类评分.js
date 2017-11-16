@@ -15,7 +15,7 @@
         var h1_ts = jQuery("h1.ts");
         const isHeji = h1_ts.find(">a").attr("href").includes("typeid=176");
         var title = h1_ts.find(">span").text();
-        var title_match = title.match(/(\d*\.?\d*G)/);
+        var title_match = title.match(/\d+(\.*\d*)G/);
         title_match && title_match[0] && (function (xxG) {
             var GiB = xxG.match(/\d*\.?\d*/)[0] - 0;
             var qb = (qb = Math.round(GiB * 30)) > 1000 ? 1000 : (qb);
