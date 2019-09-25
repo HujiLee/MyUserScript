@@ -30,7 +30,11 @@ if (!document.querySelector("#postlist>[id^=post_]")) {
     })();
     var size = (function () {
         var title = jQuery('#postlist  td.plc.ptm.pbn > h1')[0];
-        var size = title.childNodes[2].data;
+        //20190925更新--start--
+        jQuery(title).find("a").remove();
+        var size = title.innerText;
+        //var size = title.childNodes[2].data;
+        //20190925更新--end--
         size = size.substr(size.lastIndexOf('[') + 1, size.lastIndexOf(']') - size.lastIndexOf('[') - 1);
         size = size.substr(0, size.lastIndexOf('G'));
         size = parseFloat(size);
